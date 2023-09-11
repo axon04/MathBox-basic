@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+body{
+    background-color: #eee;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+#jax-logo-a{
+    font-weight: bold;
+    color: #008200;
+}
+#jax-logo-b{
+    font-weight: bold;
+}
+
+.header{
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 8px 0px #9497a1
+}
+
+.header h1{
+    font-weight: 600;
+    color: #4b4b4b;
+}
+.ax-card{
+    border-radius: 4px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.ax-display{
+    height: 250px;
+    overflow-y: scroll;
+    word-break: break-all;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+}
+.ax-line-height{
+    line-height: 50px;
+}
+.ax-heading{
+    margin-bottom: 4px;
+}
+.ax-subheading{
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.ax-help{
+    padding: 2px 6px 1px 6px;
+    color: white;
+    background-color: #008200;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 40px;
+}
+.btn-light{
+    background-color: #eee;
+}
+.ax-buttons{
+    margin-right: 2px;
+    width: 158px;
+}

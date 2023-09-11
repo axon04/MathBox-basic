@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Test</title>
+</head>
+
+<body>
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col-6">
+                <textarea name="input" id="input" rows="10" placeholder="Input" class="form-control"
+                    oninput="displayOutput()"></textarea>
+            </div>
+            <div class="col-6">
+                <div id="display" rows="10" style="background-color: #eee;"></div>
+            </div>
+        </div>
+        <button onclick="createOutput()">Create</button>
+        <div class="row">
+            <div class="col">
+                <p>
+                    When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+                    $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+                </p>
+                <pre id="output"></pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+    <script>
+        const input = document.getElementById('input');
+
+        const display = document.getElementById('display');
+
+        function formatNextLine(p){
+            return  p.replace(/.  \n/, '.<br>');
+        }
+
+        function displayOutput() {
+            let content = input.value;
+            display.innerHTML = formatNextLine(content);
+            MathJax.typeset();
+        }
+            // Future update: if more than one paragraph split them into <p> tags.
+
+            // let splitArr = content.split(/\n\n/);
+            // splitArr.forEach((para)=>{
+            //     const paragraph = document.createElement('p');
+            //     const str = formatNextLine(para);
+            //     const text = document.createTextNode(str);     // format next lines
+            //     paragraph.appendChild(text);
+            //     display.appendChild(paragraph);
+            // })
+        
+
+    </script>
+</body>
+
+</html>
